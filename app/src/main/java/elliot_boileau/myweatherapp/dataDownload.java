@@ -49,22 +49,23 @@ public class dataDownload extends AsyncTask<String,Void,String> {
     @Override
     protected void onPostExecute(String result){
 
-        Log.i("myLog", result);
+        Log.i("myLog","result");
 
 
         try {
             JSONObject jsonObject = new JSONObject(result);
-            String weatherInfo = jsonObject.getString("Weather");
+
             JSONObject weatherData = new JSONObject(jsonObject.getString("main"));
 
             Double temp = Double.parseDouble(weatherData.getString("temp"));
 
-            String placeName = jsonObject.getString("Name");
+            String placeName = jsonObject.getString("name");
 
             MainActivity.tempTextView.setText(String.valueOf(temp));
             MainActivity.placeTextView.setText(String.valueOf(placeName));
-
+            Log.i("myLog","try");
         } catch (Exception e) {
+            Log.i("myLog","catch");
             e.printStackTrace();
         }
 

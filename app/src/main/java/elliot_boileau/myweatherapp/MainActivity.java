@@ -40,7 +40,15 @@ public class MainActivity extends AppCompatActivity {
 
         String provider = locationManager.getBestProvider(new Criteria(), false);
         Log.i("myLog1", "reached execute3");
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+        Log.i("myLog1", "reached execute3.1");
+
+        if (ActivityCompat.checkSelfPermission
+                (this,Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission
+                (this,Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
@@ -60,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
         tempTextView = (TextView)  findViewById(R.id.lonTextView);
         dataDownload task = new dataDownload();
 
-        task.execute("http://api.openweathermap.org/data/2.5/weather?lat={" + String.valueOf(lat) + "}&lon={" + String.valueOf(lon) + "}&appid=9c3f570f69afa7651fa40846233996cd\n");
+        task.execute("http://api.openweathermap.org/data/2.5/weather?lat={"
+                + String.valueOf(lat) + "}&lon={" + String.valueOf(lon) + "}&appid=9c3f570f69afa7651fa40846233996cd\n");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

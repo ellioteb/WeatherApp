@@ -36,6 +36,23 @@
             android:text="TextView"
             tools:layout_editor_absoluteX="161dp"
             tools:layout_editor_absoluteY="72dp" />
+        <TextView
+            android:id="@+id/latView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="72dp" />
+        <TextView
+            android:id="@+id/longView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="72dp" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
