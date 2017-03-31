@@ -6,6 +6,7 @@ package elliot_boileau.myweatherapp;
 import android.os.AsyncTask;
 import android.os.StrictMode;
 import android.speech.tts.Voice;
+import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -47,7 +48,8 @@ public class dataDownload extends AsyncTask<String,Void,String> {
     }
     @Override
     protected void onPostExecute(String result){
-        System.out.println(result);
+
+        Log.i("myLog", result);
 
 
         try {
