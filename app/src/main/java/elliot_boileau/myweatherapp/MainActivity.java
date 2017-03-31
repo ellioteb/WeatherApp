@@ -59,11 +59,13 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         Location location = locationManager.getLastKnownLocation(provider);
+        Log.i("myLogProvider",provider);
         Log.i("myLog1","reached execute4");
 
         Double lat = location.getLatitude();
 
         Double lon = location.getLongitude();
+        Log.i("myLog LatLon",lat+""+lon);
         placeTextView = (TextView) findViewById(R.id.latTextView);
         tempTextView = (TextView)  findViewById(R.id.lonTextView);
         dataDownload task = new dataDownload();

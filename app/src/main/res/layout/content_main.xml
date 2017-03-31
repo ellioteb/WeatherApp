@@ -16,42 +16,42 @@
         android:layout_height="495dp"
         android:layout_weight="1"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+       >
 
         <TextView
             android:id="@+id/nameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="140dp" />
+
+            android:text="placeholder"
+            android:textSize="50sp"
+            />
 
         <TextView
             android:id="@+id/tempTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="72dp" />
+            android:text="placeholder"
+            android:textSize="50sp"
+             />
         <TextView
             android:id="@+id/latView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="72dp" />
+            android:layout_gravity="center"
+            android:text="test:"
+            android:textSize="50sp" />
         <TextView
             android:id="@+id/longView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="72dp" />
+
+            android:text="placeholder"
+            android:textSize="50sp"
+            />
 
     </LinearLayout>
 
