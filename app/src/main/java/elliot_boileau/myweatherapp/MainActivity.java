@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     static TextView placeTextView;
     static TextView tempTextView;
-    static TextView lonTextView;
-    static TextView latTextView;
+     TextView lonTextView;
+     TextView latTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +66,10 @@ public class MainActivity extends AppCompatActivity {
 
         Double lon = location.getLongitude();
         Log.i("myLog LatLon",lat+""+lon);
-        placeTextView = (TextView) findViewById(R.id.latTextView);
-        tempTextView = (TextView)  findViewById(R.id.lonTextView);
+        latTextView = (TextView) findViewById(R.id.latTextView);
+        lonTextView = (TextView)  findViewById(R.id.lonTextView);
+        latTextView.setText("lat"+lat);
+        lonTextView.setText("Lon"+lon);
         dataDownload task = new dataDownload();
 
         task.execute("http://api.openweathermap.org/data/2.5/weather?lat={"
